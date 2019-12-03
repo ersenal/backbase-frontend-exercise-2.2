@@ -1,8 +1,22 @@
 import React from "react";
 
-class App extends React.PureComponent {
+import { fetchCurrentWeatherByCityName } from "./open-weather-map/openWeatherMap";
+
+interface IState {
+  response?: any;
+}
+
+class App extends React.PureComponent<{}, IState> {
+  public state: IState = {};
+
+  public async componentDidMount() {
+    const response = await fetchCurrentWeatherByCityName("london", "uk");
+    this.setState({ response });
+  }
+
   public render() {
-    return "Hello World!";
+    const { response } = this.state;
+    return response ? JSON.stringify(response) : "...";
   }
 }
 
