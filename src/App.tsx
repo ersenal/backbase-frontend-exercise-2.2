@@ -1,6 +1,9 @@
 import React from "react";
 
-import { fetchCurrentWeatherByCityName } from "./open-weather-map/openWeatherMap";
+import {
+  fetchWeatherForecastByCityName,
+  TemperatureUnit
+} from "./open-weather-map-api/openWeatherMap";
 
 interface IState {
   response?: any;
@@ -10,7 +13,7 @@ class App extends React.PureComponent<{}, IState> {
   public state: IState = {};
 
   public async componentDidMount() {
-    const response = await fetchCurrentWeatherByCityName("london", "uk");
+    const response = await fetchWeatherForecastByCityName("london", "uk", TemperatureUnit.Celsius);
     this.setState({ response });
   }
 
