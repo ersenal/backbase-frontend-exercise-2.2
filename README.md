@@ -7,6 +7,9 @@ A single page application which uses the [OpenWeather](https://openweathermap.or
 **Requires Node.js 8+**
 
 ```bash
+# setup environment variables
+cp .env.example .env
+
 npm install # or yarn
 
 # dev mode hot reloaded at localhost:8080
