@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // NOTE(ersenal): Constrained to ES6 by the specification
+    "target": "ES6",
+    "module": "ES6",
+
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "typeRoots": ["types", "node_modules/@types"],
+
+    // NOTE(ersenal): Custom base path mapping
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  }
+}
