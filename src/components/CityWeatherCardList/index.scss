@@ -1,0 +1,6 @@
+.city-weather-card-list {
+  display: grid;
+  gap: 2em;
+  margin: 1em 0 1em 0;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+}

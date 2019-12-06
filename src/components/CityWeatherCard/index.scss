@@ -1,0 +1,16 @@
+.city-weather-card {
+  display: grid;
+  align-items: center;
+  height: 250px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

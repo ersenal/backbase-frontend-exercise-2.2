@@ -50,6 +50,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@blueprintjs/core": "^3.22.1",
     "@types/node-fetch": "^2.5.4",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
