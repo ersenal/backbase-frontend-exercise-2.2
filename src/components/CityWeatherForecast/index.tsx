@@ -6,6 +6,8 @@ import WeatherForecastContainer from "~/containers/WeatherForecastContainer";
 import { TemperatureUnit } from "~/api/openWeatherMap";
 import UnwrapStatus from "../UnwrapStatus";
 import HourlyMeasurement from "../HourlyMeasurement";
+import ForecastChart from "../ForecastChart";
+import { secondsToMilliseconds } from "~/util/units";
 
 import "./index.scss";
 
@@ -39,7 +41,18 @@ class CityWeatherForecast extends React.PureComponent<IProps> {
                       <Link to="/">See all</Link>
                     </small>
                   </H3>
-                  <div className="measurements">{measurements}</div>
+                  <div className="body">
+                    <div className="measurements">{measurements}</div>
+                    <div className="chart">
+                      <ForecastChart
+                        temperatureUnit={temperatureUnit}
+                        data={value.list.map(s => ({
+                          y: s.main.temp,
+                          x: new Date(secondsToMilliseconds(s.dt))
+                        }))}
+                      />
+                    </div>
+                  </div>
                 </div>
               );
             }}

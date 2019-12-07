@@ -3,9 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
   height: 300px;
   border-radius: 0;
+
+  // NOTE(ersenal): We want hour measurement cards to retain their widths
+  flex-grow: 0;
+  flex-shrink: 0;
 
   .hour {
     font-weight: 600;

@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@blueprintjs/core": "^3.22.1",
+    "@nivo/line": "^0.59.3",
     "@reach/router": "^1.2.1",
     "@types/node-fetch": "^2.5.4",
     "@types/reach__router": "^1.2.6",

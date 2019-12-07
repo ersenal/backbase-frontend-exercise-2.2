@@ -16,6 +16,9 @@ interface IProps {
   temperatureUnit: TemperatureUnit;
 }
 
+// NOTE(ersenal): Lift this up from ./index.scss as the width of the chart relies on it
+export const WIDTH_PX = 120;
+
 class HourlyMeasurement extends React.PureComponent<IProps> {
   public render() {
     const {
@@ -27,7 +30,7 @@ class HourlyMeasurement extends React.PureComponent<IProps> {
     const measurementParts = dateParts(measurementDate);
 
     return (
-      <Card className="hourly-measurement">
+      <Card className="hourly-measurement" style={{ width: `${WIDTH_PX}px` }}>
         <div>
           <span className="hour">{measurementParts.hour}</span>
           <span className="minute">{measurementParts.minute}</span>

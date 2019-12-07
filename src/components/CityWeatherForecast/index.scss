@@ -1,7 +1,21 @@
 .city-weather-forecast {
-  .measurements {
-    display: flex;
-    margin: 1em 0 1em 0;
+  .body {
     overflow-x: auto;
+    overflow-y: hidden;
+
+    // NOTE(ersenal): We want to overlay the chart
+    position: relative;
+
+    .measurements {
+      display: flex;
+      margin: 1em 0 1em 0;
+    }
+
+    .chart {
+      position: absolute;
+      top: 0;
+      margin-top: 40px;
+      opacity: 0.5;
+    }
   }
 }
