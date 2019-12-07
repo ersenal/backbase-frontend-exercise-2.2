@@ -1,12 +1,22 @@
 import React from "react";
+
 import { IWeather } from "~/api/responseTypes";
 
 const URL = "https://openweathermap.org/img/wn";
 
-class WeatherIcon extends React.PureComponent<IWeather> {
+interface IProps {
+  large?: boolean;
+  weather: IWeather;
+}
+
+class WeatherIcon extends React.PureComponent<IProps> {
   public render() {
-    const { icon, description } = this.props;
-    return <img src={`${URL}/${icon}@2x.png`} alt={description} />;
+    const {
+      weather: { icon, description },
+      large
+    } = this.props;
+
+    return <img src={`${URL}/${icon}${large ? "@2x" : ""}.png`} alt={description} />;
   }
 }
 

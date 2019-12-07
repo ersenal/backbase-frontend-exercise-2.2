@@ -3,6 +3,12 @@
   align-items: center;
   height: 250px;
 
+  .bp3-non-ideal-state {
+    text-align: left;
+    align-items: flex-start;
+    overflow: auto;
+  }
+
   .top {
     display: flex;
     justify-content: space-between;

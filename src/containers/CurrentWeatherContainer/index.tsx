@@ -3,7 +3,6 @@ import React from "react";
 import { TemperatureUnit, fetchCurrentWeatherByCityName } from "~/api/openWeatherMap";
 import { ICurrentWeatherResponse } from "~/api/responseTypes";
 import OpenWeatherMapApiError from "~/api/OpenWeatherMapApiError";
-
 import { Status } from "~/api/Status";
 
 interface IProps {

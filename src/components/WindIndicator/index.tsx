@@ -1,6 +1,8 @@
 import React from "react";
 import { Icon } from "@blueprintjs/core";
 
+import { mpsToKph } from "~/util/units";
+
 import "./index.scss";
 
 interface IProps {
@@ -10,19 +12,13 @@ interface IProps {
 }
 
 class WindIndicator extends React.PureComponent<IProps> {
-  private static mpsToKph(mps: number) {
-    return mps * 3.6;
-  }
-
   public render() {
     const { degrees, speed, isMetric } = this.props;
     return (
       <div className="wind-indicator">
         <Icon icon="arrow-down" style={{ transform: `rotate(${degrees}deg)` }} />
         <span className="speed">
-          {isMetric
-            ? `${Math.trunc(WindIndicator.mpsToKph(speed))}km/h`
-            : `${Math.trunc(speed)}mph`}
+          {isMetric ? `${Math.trunc(mpsToKph(speed))}km/h` : `${Math.trunc(speed)}mph`}
         </span>
       </div>
     );

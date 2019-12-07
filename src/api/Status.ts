@@ -1,4 +1,4 @@
-export type Status<T, E> =
+export type Status<T, E extends Error> =
   | {
       // loading
       value: null;

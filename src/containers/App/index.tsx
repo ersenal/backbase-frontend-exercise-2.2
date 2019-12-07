@@ -1,9 +1,10 @@
 import React from "react";
+import { Router } from "@reach/router";
 
 import { TemperatureUnit } from "~/api/openWeatherMap";
 import UnitSelector from "~/components/UnitSelector";
-import CityWeatherCardList from "~/components/CityWeatherCardList";
-import CityWeatherCard from "~/components/CityWeatherCard";
+import HomePage from "~/components/HomePage";
+import ForecastPage from "~/components/ForecastPage";
 
 import "./index.scss";
 
@@ -22,13 +23,10 @@ class App extends React.PureComponent<{}, IState> {
     return (
       <div className="app">
         <UnitSelector value={unit} onChange={this.handleUnitChange} />
-        <CityWeatherCardList>
-          <CityWeatherCard cityName="london" countryCode="uk" temperatureUnit={unit} />
-          <CityWeatherCard cityName="cardiff" countryCode="uk" temperatureUnit={unit} />
-          <CityWeatherCard cityName="edinburgh" countryCode="uk" temperatureUnit={unit} />
-          <CityWeatherCard cityName="manchester" countryCode="uk" temperatureUnit={unit} />
-          <CityWeatherCard cityName="dublin" countryCode="ie" temperatureUnit={unit} />
-        </CityWeatherCardList>
+        <Router>
+          <HomePage path="/" temperatureUnit={unit} />
+          <ForecastPage path="/:countryCode/:cityName" temperatureUnit={unit} />
+        </Router>
       </div>
     );
   }

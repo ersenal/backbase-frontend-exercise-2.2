@@ -12,6 +12,7 @@ class UnitSelector extends React.PureComponent<IProps> {
   public render() {
     const { value } = this.props;
     const options = Object.entries(TemperatureUnit).map(([k, v]) => ({ label: k, value: v }));
+
     return (
       <FormGroup label="Temperature Unit" inline={true}>
         <HTMLSelect options={options} value={value} onChange={this.handleChange} />
