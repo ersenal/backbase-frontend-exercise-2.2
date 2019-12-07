@@ -1,4 +1,6 @@
 import React from "react";
+import { H3 } from "@blueprintjs/core";
+import { Link } from "@reach/router";
 
 import WeatherForecastContainer from "~/containers/WeatherForecastContainer";
 import { TemperatureUnit } from "~/api/openWeatherMap";
@@ -23,15 +25,25 @@ class CityWeatherForecast extends React.PureComponent<IProps> {
         temperatureUnit={temperatureUnit}
       >
         {({ weatherForecast }) => (
-          <div className="city-weather-forecast">
-            <UnwrapStatus status={weatherForecast}>
-              {value => {
-                return value.list.map(v => (
-                  <HourlyMeasurement key={v.dt} measurement={v} temperatureUnit={temperatureUnit} />
-                ));
-              }}
-            </UnwrapStatus>
-          </div>
+          <UnwrapStatus status={weatherForecast}>
+            {value => {
+              const measurements = value.list.map(v => (
+                <HourlyMeasurement key={v.dt} measurement={v} temperatureUnit={temperatureUnit} />
+              ));
+
+              return (
+                <div className="city-weather-forecast">
+                  <H3>
+                    {value.city.name} ({value.city.country}){" "}
+                    <small>
+                      <Link to="/">See all</Link>
+                    </small>
+                  </H3>
+                  <div className="measurements">{measurements}</div>
+                </div>
+              );
+            }}
+          </UnwrapStatus>
         )}
       </WeatherForecastContainer>
     );
