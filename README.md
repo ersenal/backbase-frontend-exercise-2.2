@@ -56,6 +56,8 @@ This solution includes the following features:
 
   - Provide the ability to select a temperature unit (Kelvin, Fahrenheit, or Celsius)
 
+  - Error handling
+
 - Non-functional requirements _not_ defined within the specification:
 
   - Unit testing
