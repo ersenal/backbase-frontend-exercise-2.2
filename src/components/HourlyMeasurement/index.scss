@@ -10,6 +10,11 @@
   flex-grow: 0;
   flex-shrink: 0;
 
+  // NOTE(ersenal): Striped measurements
+  &:nth-child(even) {
+    background-color: #fbfbfb;
+  }
+
   .hour {
     font-weight: 600;
   }
