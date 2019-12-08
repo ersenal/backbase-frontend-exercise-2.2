@@ -1,8 +1,8 @@
 import React from "react";
 import { RouteComponentProps } from "@reach/router";
 
-import { TemperatureUnit } from "~/api/openWeatherMap";
 import CityWeatherForecast from "../CityWeatherForecast";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 type RouteProps = RouteComponentProps<{ cityName: string; countryCode: string }>;
 type Props = RouteProps & {

@@ -2,7 +2,7 @@ import React from "react";
 import { Line } from "@nivo/line";
 
 import { WIDTH_PX } from "../HourlyMeasurement";
-import { TemperatureUnit } from "~/api/openWeatherMap";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 interface IProps {
   data: Array<{ x: Date; y: number }>;

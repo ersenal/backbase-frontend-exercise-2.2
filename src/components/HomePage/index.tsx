@@ -3,7 +3,7 @@ import { RouteComponentProps } from "@reach/router";
 
 import CityWeatherCardList from "../CityWeatherCardList";
 import CityWeatherCard from "../CityWeatherCard";
-import { TemperatureUnit } from "~/api/openWeatherMap";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 interface IProps {
   temperatureUnit: TemperatureUnit;

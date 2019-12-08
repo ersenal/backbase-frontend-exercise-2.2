@@ -2,12 +2,12 @@ import React from "react";
 import { Card, Elevation, H5 } from "@blueprintjs/core";
 import { navigate } from "@reach/router";
 
-import { TemperatureUnit } from "~/api/openWeatherMap";
 import CurrentWeatherContainer from "~/containers/CurrentWeatherContainer";
 import DegreeUnits from "../DegreeUnits";
 import WindIndicator from "../WindIndicator";
 import WeatherIcon from "../WeatherIcon";
 import UnwrapStatus from "../UnwrapStatus";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 import "./index.scss";
 

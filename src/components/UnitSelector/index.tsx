@@ -1,7 +1,7 @@
 import React from "react";
 import { HTMLSelect, FormGroup } from "@blueprintjs/core";
 
-import { TemperatureUnit } from "~/api/openWeatherMap";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 interface IProps {
   value: TemperatureUnit;

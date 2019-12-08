@@ -1,9 +1,10 @@
 import React from "react";
 
-import { TemperatureUnit, fetchWeatherForecastByCityName } from "~/api/openWeatherMap";
+import { fetchWeatherForecastByCityName } from "~/api/openWeatherMap";
 import { IWeatherForecastResponse } from "~/api/responseTypes";
 import OpenWeatherMapApiError from "~/api/OpenWeatherMapApiError";
 import { Status } from "~/api/Status";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 interface IProps {
   cityName: string;

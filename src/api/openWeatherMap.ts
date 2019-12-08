@@ -1,11 +1,6 @@
 import { request } from "./apiUtil";
 import { ICurrentWeatherResponse, IWeatherForecastResponse } from "./responseTypes";
-
-export enum TemperatureUnit {
-  Fahrenheit = "imperial",
-  Celsius = "metric",
-  Kelvin = ""
-}
+import { TemperatureUnit } from "./TemperatureUnit";
 
 export async function fetchCurrentWeatherByCityName(
   cityName: string,

@@ -9,7 +9,8 @@
     "build:dev": "webpack --env.mode development",
     "lint": "tslint --project tsconfig.json",
     "format:check": "prettier --list-different \"src/**/*.{ts,tsx}\"",
-    "build:check": "tsc --noEmit"
+    "build:check": "tsc --noEmit",
+    "test": "jest"
   },
   "contributors": [
     "Ali Ersenal <ali@ersenal.com>"
@@ -53,20 +54,37 @@
     "@blueprintjs/core": "^3.22.1",
     "@nivo/line": "^0.59.3",
     "@reach/router": "^1.2.1",
+    "@types/jest": "^24.0.23",
     "@types/node-fetch": "^2.5.4",
     "@types/reach__router": "^1.2.6",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
     "babel-polyfill": "^6.26.0",
+    "jest": "^24.9.0",
     "normalize.css": "^8.0.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-hot-loader": "^4.12.15",
+    "ts-jest": "^24.2.0",
     "unfetch": "^4.1.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run format:check && npm run lint && npm run build:check"
     }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^~(.*)$": "<rootDir>/src$1"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|tsx|js)$"
   }
 }

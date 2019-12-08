@@ -1,8 +1,8 @@
 import React from "react";
 import { Tag } from "@blueprintjs/core";
 
-import { TemperatureUnit } from "~/api/openWeatherMap";
-import temperatureUnitToSymbol from "~/util/units";
+import { temperatureUnitToSymbol } from "~/util/units";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 interface IProps {
   degree: number;

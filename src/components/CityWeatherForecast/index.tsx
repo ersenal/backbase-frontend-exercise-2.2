@@ -3,11 +3,11 @@ import { H3 } from "@blueprintjs/core";
 import { Link } from "@reach/router";
 
 import WeatherForecastContainer from "~/containers/WeatherForecastContainer";
-import { TemperatureUnit } from "~/api/openWeatherMap";
 import UnwrapStatus from "../UnwrapStatus";
 import HourlyMeasurement from "../HourlyMeasurement";
 import ForecastChart from "../ForecastChart";
 import { secondsToMilliseconds } from "~/util/units";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 import "./index.scss";
 

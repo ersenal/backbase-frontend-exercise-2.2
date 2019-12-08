@@ -4,10 +4,10 @@ import { Card } from "@blueprintjs/core";
 import { IMeasurement } from "~/api/responseTypes";
 import { secondsToMilliseconds } from "~/util/units";
 import DegreeUnits from "../DegreeUnits";
-import { TemperatureUnit } from "~/api/openWeatherMap";
 import WeatherIcon from "../WeatherIcon";
 import WindIndicator from "../WindIndicator";
 import { dateParts } from "~/util/date";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 import "./index.scss";
 

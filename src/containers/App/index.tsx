@@ -1,10 +1,10 @@
 import React from "react";
 import { Router } from "@reach/router";
 
-import { TemperatureUnit } from "~/api/openWeatherMap";
 import UnitSelector from "~/components/UnitSelector";
 import HomePage from "~/components/HomePage";
 import ForecastPage from "~/components/ForecastPage";
+import { TemperatureUnit } from "~/api/TemperatureUnit";
 
 import "./index.scss";
 
