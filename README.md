@@ -24,51 +24,51 @@ npm run prod
 
 ## Features
 
-This solution includes the following features:
+This solution includes the following features.
 
-- Functional requirements defined within the specification:
+**Functional requirements defined within the specification**:
 
-  - Display the current weather situation (average temperature and wind strength) for a list of 5 European cities
+- Display the current weather situation (average temperature and wind strength) for a list of 5 European cities
 
-  - Clicking on a list item shows the weather forecast for the next hours
+- Clicking on a list item shows the weather forecast for the next hours
 
-  - Use a chart for extra points. This solution charts the predicted temperature
+- Use a chart for extra points. This solution charts the predicted temperature
 
-- Non-functional requirements defined within the specification:
+**Non-functional requirements defined within the specification**:
 
-  - This solution is a single page application
+- This solution is a single page application
 
-  - This solution uses the ES6 standard (see [tsconfig.json](tsconfig.json))
+- This solution uses the ES6 standard (see [tsconfig.json](tsconfig.json))
 
-  - No scaffolding tools have been utilised
+- No scaffolding tools have been utilised
 
-  - Instructions on how to run the solution have been provided
+- Instructions on how to run the solution have been provided
 
-  - No out-of-the-box plug-ins have been used
+- No out-of-the-box plug-ins have been used
 
-  - A readme file has been created, describing what has been done
+- A readme file has been created, describing what has been done
 
-  - In-line code comments have been provided to explain low-level decisions
+- In-line code comments have been provided to explain low-level decisions
 
-  - A summary has been provided in this file to explain higher-level architectural decisions
+- A summary has been provided in this file to explain higher-level architectural decisions
 
-- Functional requirements _not_ defined within the specification:
+**Functional requirements _not_ defined within the specification**:
 
-  - Provide the ability to select a temperature unit (Kelvin, Fahrenheit, or Celsius)
+- Provide the ability to select a temperature unit (Kelvin, Fahrenheit, or Celsius)
 
-  - Error handling
+- Error handling
 
-- Non-functional requirements _not_ defined within the specification:
+**Non-functional requirements _not_ defined within the specification**:
 
-  - Unit testing
+- Unit testing
 
-  - Minification of assets and CSS extraction in production builds
+- Minification of assets and CSS extraction in production builds
 
-  - Hot-reload in development
+- Hot-reload in development
 
-  - Full linting and formatting setup (_tslint_, _prettier_, _husky_)
+- Full linting and formatting setup (_tslint_, _prettier_, _husky_)
 
-  - No hard-coded API key, it can be passed in via an environment variable (see [.env.example](.env.example)) defined in a _.env_ file
+- No hard-coded API key, it can be passed in via an environment variable (see [.env.example](.env.example)) defined in a _.env_ file
 
 ## UI/UX
 
